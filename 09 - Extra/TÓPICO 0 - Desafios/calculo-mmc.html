@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+    var nome = prompt('Qual é o seu nome')
+    var altura = prompt('Qual é a sua altura? (em cm)')
+    var peso = prompt('Qual é o seu peso? (em kg)')
+    var m
+    var r
+    altura = parseFloat (altura)
+    peso = parseFloat (peso)
+
+    console.log(altura)
+    console.log(peso)
+    altura /= 100
+
+    r = peso / (altura*altura)
+
+
+    if ( r < 35 )
+    {
+        if ( r < 18.50 )
+        {
+            if ( r < 16 )
+            {
+                m = 'Baixo peso muito grave'
+            }else 
+            {
+                if ( r < 17 )
+                {
+                    m = 'Baixo peso grave'
+                }else
+                {
+                    m = 'Baixo peso grave'
+                }
+            }
+        }else
+        {
+            if ( r < 25 )
+            {
+                m = 'Peso Normal'
+            }else 
+            {
+                if ( r < 30 )
+                {
+                    m = 'Sobrepeso'
+                }else
+                {
+                    m = 'Obesidade grau I '
+                }
+            }
+        }
+    }else{
+        if ( r > 40 )
+        {
+            m = 'Obesidade grau III'
+        }else
+        {
+            m = 'Obesidade grau II'
+        }
+    }
+
+    document.write(nome + ' tespossui índice de massa corporal igual a ' + r + ', sendo classificado como: ' + m)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

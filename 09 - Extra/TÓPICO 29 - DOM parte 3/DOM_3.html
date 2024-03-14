@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    
+</head>
+<body>
+
+    <h3>Manipulando estilo:</h3>
+
+
+    <button onclick = "modificaEstilo('#FF0000', '100px', '100px')" type = "button">Vermelho</button>
+    <button onclick = "modificaEstilo('#00FF00', '250px', '250px')" type = "button">Verde</button>
+    <button onclick = "modificaEstilo('#0000FF', '500px', '500px')" type = "button">Azul</button>
+
+    <hr />
+
+    <div  id = "caixa" style="border: solid 1px #000; width: 100px; height: 100px"></div>
+
+
+<script>
+    function modificaEstilo(corDeFundo, l, a)        
+    {
+        document.getElementById('caixa').style.background = corDeFundo
+        document.getElementById('caixa').style.width = l
+        document.getElementById('caixa').style.height = a
+    }
+</script>
+
+</body>
+</html>

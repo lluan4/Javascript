@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!--<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <!-- Your custom script here -->
+    <script type="text/babel">
+       
+        //3 escopos: global, função e bloco
+        var serie = 'Friends'
+        
+        function x () {
+
+            var serie = 'Game'
+            console.log ('Função: ' + serie)
+            if (true) {
+                console.log ('Bloco dentro da função: ' + serie)
+            }  
+        }
+
+        if (true) {
+            x ()
+            console.log ('Global: ' + serie)
+        }
+  
+        if (true) {
+            let teste = "HdA" //Não sofre hoisting (elevação)
+            console.log ('Função let: ' + teste)
+        }
+        console.log ('Global: ' + teste)
+    </script>
+    
+</head>
+<body>
+   
+</body>
+</html>

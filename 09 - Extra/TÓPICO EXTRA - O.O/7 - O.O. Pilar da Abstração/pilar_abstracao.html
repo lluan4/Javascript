@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!--<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        
+        /*
+        Entidade                    Identidade                      Características                                 Ações
+        Carro                       x = new Carro ()                Marca, modelo, cor, qtdePortas                  ligar, acelerar, freiar, desligar
+        Sonho                       z = new Sonho()                 tipo, historia, gostaria_sonhar_denovo          exibirHistoria
+        ContaBancaria               y = new ContaBancaria()         agencia, numeroConta, saldo, limite             depositar, sacar, consultaSaldo
+        */
+        
+        // modelo da entidade/objeto
+        class ContaBancaria {
+
+            constructor () {
+                this.agencia = 1075
+                this.numeroConta = 8351125
+                this.saldo = 50
+                this.limite = 450
+            }
+
+            depositar(valorDeposito) {
+                this.saldo += valorDeposito
+            }
+            
+            sacar(valorSaque) {
+                this.saldo -= valorSaque
+            }
+
+            consultaSaldo() {
+                return this.saldo
+            }
+
+        } 
+
+        let x = new ContaBancaria()
+        let y = new ContaBancaria()
+
+        console.log(x.consultaSaldo())
+        x.depositar(450)
+        console.log(x.consultaSaldo())
+        x.sacar(200)
+        console.log(x.consultaSaldo())
+
+        console.log(y.consultaSaldo())
+
+    </script>
+    
+</head>
+<body>
+   
+</body>
+</html>

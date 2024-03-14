@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+        var x = 1
+
+        // While 
+        while( x<= 10) {
+            x++
+            if ( x === 5){
+                continue // ignora o código que está abaixo e volta ao looping do while
+            }
+            document.write(x + '<br />')
+            if ( x === 5){
+                break // sai do laço
+            }
+        }
+        document.write('<hr />')
+
+        // Do while
+        x = 0
+        do{
+            document.write(x + '<br />')
+            x++
+        } while( x <= 10)
+        document.write('<hr />')
+
+        //For
+        for ( var i = 10; i >= 0; i-= 4) {  //for (variavel; condicao; controle)
+            document.write(i + '<br />')
+        }
+        document.write('<hr />')
+
+        //For in
+        var lista1 = []
+
+        lista1 ['a'] = 'José'
+        lista1 [10] = 'Pedro'
+        lista1 ['Zebra'] = 'Maicon'
+        lista1 [-1] = 'Ana'
+        lista1 [true] = 'Marcos'
+
+        for(var x in lista1) {
+            document.write ('Índice ' + x + ' valor ' + lista1 [x]  + '<br />')
+        }
+        document.write('<hr />')
+
+        //For each - Só valor númerico  e >= 0
+        var lista2 = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+
+        var f = function(valor, indice){ 
+            console.log(valor, indice)
+        }
+
+        lista2.forEach(f)
+
+        /*lista2.forEach(function(valor, indice, array){
+            //lógica
+            document.write(array + '<br />' )
+
+            document.write('Índice ' + indice + ' | ' + valor + '<br />')
+
+            if (valor === 'Rosângela'){
+                array [indice] = 'Um novo valor' 
+            }
+            
+        })*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

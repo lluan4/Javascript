@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+       
+    </script>
+</head>
+<body>
+
+    <span><input id = 'campo' type = 'text'></span>
+    <span><button onclick="adicionar()" type = 'button'>Adicionar</button></span>
+    <span><button onclick="ordenar()" type = 'button'>Ordenar</button></span>
+   
+
+    <script>
+        var lista = []
+        function adicionar(){
+            var texto = document.getElementById('campo').value
+            if (texto === ""){
+                alert("Informe um valor válido")
+            }else if (lista.indexOf(texto) === -1){
+                lista.push(texto)
+                document.getElementById('campo').value = ""
+                console.log(lista)
+
+            }else{
+                alert("Objeto já foi adicionado.")
+                document.getElementById('campo').value = ""
+            }
+        }
+        function ordenar(){
+            console.log(lista.sort())
+        }
+    </script>
+
+
+</body>
+</html>

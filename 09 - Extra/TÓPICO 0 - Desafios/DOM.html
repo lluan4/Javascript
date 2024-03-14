@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    
+  </head>
+
+  <body>
+    <div ><input id="campo" type="text" onfocus="focuss()" onblur="desfoque()"></div>
+
+  <script>
+      function focuss()
+      {
+        document.getElementById('campo').style.backgroundColor = 'yellow' 
+      }
+      function desfoque()
+      {
+        
+        if ( (document.getElementById('campo').value.length) < 3)
+        {
+          document.getElementById('campo').style.backgroundColor = 'red' 
+          document.getElementById('campo').style.color = 'white' 
+        }else
+        {
+          document.getElementById('campo').style.backgroundColor = 'green' 
+          document.getElementById('campo').style.color = 'white' 
+        }
+      }
+  </script>
+  </body>
+</html>

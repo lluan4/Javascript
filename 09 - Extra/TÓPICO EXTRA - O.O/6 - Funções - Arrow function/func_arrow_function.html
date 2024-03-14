@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!--<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <!-- Your custom script here -->
+    <script type="text/babel">
+        
+        /* let quadrado = function(x = 1) {
+            return x * x
+        } */
+
+        // Arrow function
+        /* let quadrado = (x, y) => {
+            return x * x
+        } */
+
+        // Arrow function uma variável
+        /* let quadrado = x => {
+            return x * x
+        } */
+
+        // Arrow function return implícito
+        /* let quadrado = x => x * x
+
+        document.write ( quadrado(2) ) */
+
+        /* 
+            let parOuImpar = function(numero) {
+            
+            if (numero % 2 === 0) {
+               return 'par'
+            } else {
+                return 'impar'
+            }
+        }
+
+        document.write (`O número é ${parOuImpar(6)}`) */
+
+        /* 
+            let parOuImpar = numero => {
+            if (numero % 2 === 0) {
+               return 'par'
+            } else {
+                return 'impar'
+            }
+        } */
+
+        let parOuImpar = numero => numero % 2 === 0 ? 'par' : 'ímpar'
+
+        document.write (`O número é ${parOuImpar(155)}`) 
+
+
+    </script>
+    
+</head>
+<body>
+   
+</body>
+</html>

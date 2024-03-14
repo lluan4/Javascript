@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!--<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <!-- Your custom script here -->
+    <script type="text/babel">
+
+        let nome = 'Luan' //document.getElementById('Nome').value
+        let idade = 28
+        let sexo = 'Masculino'
+        let profissao = 'Programador'
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function () {
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo}, ${this.profissao}`)
+            }
+        }
+
+        console.log(objeto)
+        objeto.exibirResumo()
+
+        let objeto2 = {
+            nomeTeste: nome, // nome = nome variável / valor = valor da variável
+            idade,
+            sexo,
+            profissao,
+            exibirResumo() {
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo}, ${this.profissao}`)
+            }
+        }
+
+        console.log(objeto2)
+        objeto.exibirResumo()
+    </script>
+    
+</head>
+<body>
+   
+</body>
+</html>
